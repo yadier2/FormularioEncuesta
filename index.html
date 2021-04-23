@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de encuesta</title>
+    <link rel="stylesheet" href="estyle.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="header">
+          <h1 id="title" class="text-center">Formulario de encuesta de mundoDigital</h1>
+          <p id="description" class="description text-center">
+            Gracias por tomarse el tiempo para ayudarnos a mejorar la plataforma.
+          </p>
+        </header>
+        <form id="survey-form">
+          <div class="form-group">
+            <label id="name-label" for="name">Nombre</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              placeholder="Introduzca su nombre"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control"
+              placeholder="Introduzca su Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="number-label" for="number"
+              >Edad</label>
+            <input
+            type="number"
+            name="age"
+            id="number"
+            min="18"
+            max="99"
+            class="form-control"
+            placeholder="Edad"
+            />
+            </div>
+
+          <div class="form-group">
+            <p>¿Qué opción describe mejor su función actual?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+              <option disabled selected value>Seleccionar función actual</option>
+              <option value="studiante">Estudiante</option>
+              <option value="trabajo">Trabajo de tiempo completo</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <p>¿Recomendarías mundoDigital a un amigo?</p>
+            <label>
+              <input
+                name="user-recommend"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+              />Si</label
+            >
+            <label>
+              <input
+                name="user-recommend"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+              />No</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>
+                ¿Qué le gustaría ver mejorado?
+              <span class="clue">(Marque todo lo que corresponda)</span>
+            </p>
+            
+            <label
+              ><input
+                name="prefer"
+                value="data-visualization"
+                type="checkbox"
+                class="input-checkbox"
+              />Visualización de datos</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="challenges"
+                type="checkbox"
+                class="input-checkbox"
+              />Desafíos</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="videos"
+                type="checkbox"
+                class="input-checkbox"
+              />Videos</label
+            >
+          
+            <label
+              ><input
+                name="prefer"
+                value="forum"
+                type="checkbox"
+                class="input-checkbox"
+              />Foro</label
+            >
+            <label
+              ><input
+                name="prefer"
+                value="additional-courses"
+                type="checkbox"
+                class="input-checkbox"
+              />Cursos adicionales</label
+            >
+          </div>
+      
+          <div class="form-group">
+            <p>¿Algún comentario o sugerencia?</p>
+            <textarea
+              id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Ingrese su comentario aquí..."
+            ></textarea>
+          </div>
+      
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
